@@ -1,5 +1,7 @@
 package com.rubson.gastronomia;
 
+import java.util.Scanner;
+
 public class Cliente extends Pessoa {
 	
 	private Pedido pedido;
@@ -23,6 +25,29 @@ public class Cliente extends Pessoa {
 	public void setTipoCliente(String tipoCliente) {
 		this.tipoCliente = tipoCliente;
 	}
+	
+	public void cadastrarCliente() {
+		
+		
+	}
+	
+	public void excluirCliente() {
+		
+	}
+	
+	public Cliente pesquisarCliente(Cliente cliente) {
+		
+		return cliente;
+		
+	}
+	
+	public Cliente corrigirCliente(Cliente cliente) {
+		
+		return cliente;
+		
+	}
+	
+	
 	
 	@Override
 	public String toString() {

@@ -41,6 +41,27 @@ public class Funcionario extends Pessoa {
 		this.tipoFuncionario = tipoFuncionario;
 	}
 	
+	public void cadastrarFuncionario() {
+		
+		
+	}
+	
+	public void excluirFuncionario() {
+		
+	}
+	
+	public Funcionario pesquisarFuncionario(Funcionario funcionario) {
+		
+		return funcionario;
+		
+	}
+	
+	public Funcionario corrigirFuncionario(Funcionario funcionario) {
+		
+		return funcionario;
+		
+	}
+	
 	@Override
 	public String toString() {
 		return "Funcionario [cargaHoraria=" + cargaHoraria + ", salario=" + salario + ", pedido=" + pedido

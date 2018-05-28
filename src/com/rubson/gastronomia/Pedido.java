@@ -26,6 +26,20 @@ public class Pedido {
 	public void setItensPedidos(ItensPedidos itensPedidos) {
 		this.itensPedidos = itensPedidos;
 	}
+	
+	public void criarPedido() {
+		
+	}
+	
+	public void encerrarPedido() {
+		
+	}
+	
+	public void cancelarPedido() {
+		
+	}
+	
+	
 
 	@Override
 	public String toString() {
