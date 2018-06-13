@@ -1,13 +1,13 @@
 package com.rubson.gastronomia;
 
-public class ItensPedidos {
+public class ItensPedido {
 	
 	private int quantidadePrato;
 	private Prato prato;
 	private double valorTotal;
 	private int quantidadeItensPedidos;
 	
-	public ItensPedidos(int quantidadePrato, Prato prato, double valorTotal, int quantidadeItensPedidos) {
+	public ItensPedido(int quantidadePrato, Prato prato, double valorTotal, int quantidadeItensPedidos) {
 		super();
 		this.quantidadePrato = quantidadePrato;
 		this.prato = prato;

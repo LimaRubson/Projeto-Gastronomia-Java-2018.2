@@ -3,12 +3,12 @@ package com.rubson.gastronomia;
 public class Pedido {
 	
 	private double valorTotalPedidos;
-	private ItensPedidos itensPedidos;
+	private ItensPedido[] itensPedido;
 	
-	public Pedido(double valorTotalPedidos, ItensPedidos itensPedidos) {
+	public Pedido(double valorTotalPedidos, ItensPedido[] itensPedidos) {
 		super();
 		this.valorTotalPedidos = valorTotalPedidos;
-		this.itensPedidos = itensPedidos;
+		this.itensPedido = itensPedidos;
 	}
 
 	public double getValorTotalPedidos() {
@@ -19,12 +19,12 @@ public class Pedido {
 		this.valorTotalPedidos = valorTotalPedidos;
 	}
 
-	public ItensPedidos getItensPedidos() {
-		return itensPedidos;
+	public ItensPedido[] getItensPedidos() {
+		return itensPedido;
 	}
 
-	public void setItensPedidos(ItensPedidos itensPedidos) {
-		this.itensPedidos = itensPedidos;
+	public void setItensPedidos(ItensPedido[] itensPedidos) {
+		this.itensPedido = itensPedidos;
 	}
 	
 	public void criarPedido() {
@@ -43,7 +43,7 @@ public class Pedido {
 
 	@Override
 	public String toString() {
-		return "Pedido [valorTotalPedidos=" + valorTotalPedidos + ", itensPedidos=" + itensPedidos + "]";
+		return "Pedido [valorTotalPedidos=" + valorTotalPedidos + ", itensPedidos=" + itensPedido + "]";
 	}
 
 }
