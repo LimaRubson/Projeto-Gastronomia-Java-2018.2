@@ -142,8 +142,11 @@ public class Funcionario extends Pessoa {
 
 	@Override
 	public String toString() {
-		return "Funcionario [cargaHoraria=" + cargaHoraria + ", salario=" + salario + ", pedido=" + pedido
-				+ ", tipoFuncionario=" + tipoFuncionario + "]";
+		return "Funcionario [getCargaHoraria()=" + getCargaHoraria() + ", getSalario()=" + getSalario()
+				+ ", getPedido()=" + getPedido() + ", getTipoFuncionario()=" + getTipoFuncionario() + ", getNome()="
+				+ getNome() + ", getCpf()=" + getCpf() + ", getRg()=" + getRg() + ", getSexo()=" + getSexo()
+				+ ", getEndereco()=" + getEndereco() + ", getEmail()=" + getEmail() + ", getTelefone()=" + getTelefone()
+				+ ", getObservacoes()=" + getObservacoes() + "]";
 	}
 	
 }

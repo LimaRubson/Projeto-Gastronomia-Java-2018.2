@@ -1,14 +1,18 @@
 package com.rubson.gastronomia.controller;
 
+import java.util.Arrays;
+
 public class Pedido {
-	
+	private String id;
 	private double valorTotalPedidos;
-	private ItensPedido itensPedido;
+	private ItensPedido[] itensPedido;
 	
-	public Pedido(double valorTotalPedidos, ItensPedido itensPedidos) {
+	public Pedido(String id, double valorTotalPedidos, ItensPedido[] itensPedido) {
 		super();
+		this.id = id;
 		this.valorTotalPedidos = valorTotalPedidos;
-		this.itensPedido = itensPedidos;
+		this.itensPedido = itensPedido;
+		
 	}
 
 	public double getValorTotalPedidos() {
@@ -18,32 +22,37 @@ public class Pedido {
 	public void setValorTotalPedidos(double valorTotalPedidos) {
 		this.valorTotalPedidos = valorTotalPedidos;
 	}
+	
 
-	public ItensPedido getItensPedidos() {
-		return itensPedido;
+	public String getId() {
+		return id;
 	}
 
-	public void setItensPedidos(ItensPedido itensPedidos) {
-		this.itensPedido = itensPedidos;
+	public void setId(String id) {
+		this.id = id;
 	}
-	
-	public void criarPedido() {
+
+	public ItensPedido getItensPedido() {
+		for(int i = 0; i < itensPedido.length; i++) {
+			
+			if(itensPedido[i] != null) {
+				return itensPedido[i];
+			
+			} 
+		}
+		
+		return null;
 		
 	}
-	
-	public void encerrarPedido() {
-		
+
+	public void setItensPedido(ItensPedido[] itensPedido) {
+		this.itensPedido = itensPedido;
 	}
-	
-	public void cancelarPedido() {
-		
-	}
-	
-	
 
 	@Override
 	public String toString() {
-		return "Pedido [valorTotalPedidos=" + valorTotalPedidos + ", itensPedidos=" + itensPedido + "]";
+		return "Pedido [getValorTotalPedidos()=" + getValorTotalPedidos() + ", getId()=" + getId()
+				+ ", getItensPedido()=" + getItensPedido() + "]";
 	}
 
 }

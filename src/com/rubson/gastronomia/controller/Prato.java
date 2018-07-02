@@ -32,26 +32,6 @@ public class Prato {
 	public void setIngredientes(String ingredientes) {
 		this.ingredientes = ingredientes;
 	}
-	
-	public void cadastrarPrato() {
-		
-	}
-	
-	public void excluirPrato() {
-		
-	}
-	
-	public Prato pesquisarPrato(Prato prato) {
-		
-		return prato;
-		
-	}
-	
-	public Prato corrigirPrato(Prato prato) {
-		
-		return prato;
-		
-	}
 
 	@Override
 	public String toString() {

@@ -9,9 +9,13 @@ public class Cliente extends Pessoa {
 	private String tipoCliente;
 	
 	public Cliente(String nome, String cpf, String rg, String sexo, String endereco, String email, String telefone,
-			String observacoes) {
+			String observacoes, String tipoCliente, Pedido pedido) {
 		super(nome, cpf, rg, sexo, endereco, email, telefone, observacoes);
 		// TODO Auto-generated constructor stub
+		
+		this.pedido = pedido;
+		this.tipoCliente = tipoCliente;
+		
 	}
 	
 	public Pedido getPedido() {
@@ -26,8 +30,6 @@ public class Cliente extends Pessoa {
 	public void setTipoCliente(String tipoCliente) {
 		this.tipoCliente = tipoCliente;
 	}
-	
-	
 	
 	@Override
 	public String getNome() {
@@ -125,11 +127,12 @@ public class Cliente extends Pessoa {
 		super.setObservacoes(observacoes);
 	}
 
-
 	@Override
 	public String toString() {
-		return "Cliente [pedido=" + pedido + ", tipoCliente=" + tipoCliente + "]";
+		return "Cliente [getPedido()=" + getPedido() + ", getTipoCliente()=" + getTipoCliente() + ", getNome()="
+				+ getNome() + ", getCpf()=" + getCpf() + ", getRg()=" + getRg() + ", getSexo()=" + getSexo()
+				+ ", getEndereco()=" + getEndereco() + ", getEmail()=" + getEmail() + ", getTelefone()=" + getTelefone()
+				+ ", getObservacoes()=" + getObservacoes() + "]";
 	}
-	
 	
 }

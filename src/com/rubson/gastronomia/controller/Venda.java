@@ -4,10 +4,10 @@ public class Venda {
 	
 	private Cliente cliente;
 	private String dataVenda;
-	private double horaVenda;
+	private String horaVenda;
 	private Pedido pedidoVendido;
 	
-	public Venda(Cliente cliente, String dataVenda, double horaVenda, Pedido pedidoVendido) {
+	public Venda(Cliente cliente, String dataVenda, String horaVenda, Pedido pedidoVendido) {
 		super();
 		this.cliente = cliente;
 		this.dataVenda = dataVenda;
@@ -21,10 +21,10 @@ public class Venda {
 	public void setDataVenda(String dataVenda) {
 		this.dataVenda = dataVenda;
 	}
-	public double getHoraVenda() {
+	public String getHoraVenda() {
 		return horaVenda;
 	}
-	public void setHoraVenda(double horaVenda) {
+	public void setHoraVenda(String horaVenda) {
 		this.horaVenda = horaVenda;
 	}
 	public Pedido getPedidoVendido() {
@@ -34,11 +34,18 @@ public class Venda {
 		this.pedidoVendido = pedidoVendido;
 	}
 
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
 
 	@Override
 	public String toString() {
-		return "Venda [cliente=" + cliente + ", dataVenda=" + dataVenda + ", horaVenda=" + horaVenda
-				+ ", pedidoVendido=" + pedidoVendido + "]";
+		return "Venda [getDataVenda()=" + getDataVenda() + ", getHoraVenda()=" + getHoraVenda()
+				+ ", getPedidoVendido()=" + getPedidoVendido() + ", getCliente()=" + getCliente() + "]";
 	}
 
 }

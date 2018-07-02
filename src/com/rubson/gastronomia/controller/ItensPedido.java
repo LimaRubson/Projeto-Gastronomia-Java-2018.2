@@ -14,6 +14,13 @@ public class ItensPedido {
 		this.valorTotal = valorTotal;
 		this.quantidadeItensPedidos = quantidadeItensPedidos;
 	}
+	
+	public ItensPedido() {
+		this.quantidadePrato = 0;
+		this.prato = null;
+		this.valorTotal = 0;
+		this.quantidadeItensPedidos = 0;
+	}
 
 	public int getQuantidadePrato() {
 		return quantidadePrato;
