@@ -11,25 +11,18 @@ public class ControleFuncionarios {
 		funcionarios.inserir(funcionario);
 	}
 	
-	public boolean remover (String numero) {
-		if(funcionarios.remover(numero)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void remover (String numero) {
+		funcionarios.remover(numero);
+			
 	}
 	
-	public String procurar(String nomeFuncionario) {
+	public Funcionario procurar(String nomeFuncionario) {
 		return funcionarios.procurar(nomeFuncionario);
 	}
 	
-	public boolean atualizar(Funcionario funcionario) {
+	public void atualizar(Funcionario funcionario) {
 		
-		if(funcionarios.atualizar(funcionario)) {
-			return true;
-		} else {
-			return false;
-		}
+		funcionarios.atualizar(funcionario);
 		
 	}
 

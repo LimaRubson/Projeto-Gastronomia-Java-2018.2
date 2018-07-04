@@ -11,25 +11,17 @@ public class ControleVendas {
 		vendas.inserir(venda);
 	}
 	
-	public boolean remover(String nomeCliente) {
-		if(vendas.remover(nomeCliente)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void remover(String nomeCliente) {
+		vendas.remover(nomeCliente);
 	}
 	
-	public String procurar(String nomeCliente) {
+	public Venda procurar(String nomeCliente) {
 		return vendas.procurar(nomeCliente);
 	}
 	
-	public boolean atualizar(Venda venda) {
+	public void atualizar(Venda venda) {
 		
-		if(vendas.atualizar(venda)) {
-			return true;
-		} else {
-			return false;
-		}
+		vendas.atualizar(venda);
 		
 	}
 

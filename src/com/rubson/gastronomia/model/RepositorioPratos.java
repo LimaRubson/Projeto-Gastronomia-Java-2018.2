@@ -4,9 +4,9 @@ import com.rubson.gastronomia.controller.Prato;
 
 public interface RepositorioPratos {
 	
-	public boolean inserir(Prato prato);
-	public boolean remover(String nomePrato);
+	public void inserir(Prato prato);
+	public void remover(String nomePrato);
 	public Prato procurar(String nomePrato);
-	public boolean atualizar(Prato prato);
+	public void atualizar(Prato prato);
 	
 }

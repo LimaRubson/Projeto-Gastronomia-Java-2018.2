@@ -20,49 +20,36 @@ public class RepositorioFuncionariosArray implements RepositorioFuncionarios {
 	
 	
 	@Override
-	public boolean inserir(Funcionario funcionario) {
-		
-		try {
+	public void inserir(Funcionario funcionario) {
 			
 			this.funcionarios[indice] = funcionario;
 			this.indice = this.indice + 1;
-	
-		} catch(Exception e) {
-			
-			return false;
-			
-		
-		}
-	
-		return true;
 		
 	}
 
 	@Override
-	public boolean remover(String nomeFuncionario) {
+	public void remover(String nomeFuncionario) {
 		
 		for(int i = 0; i < indice; i++) {
 			
 			if(funcionarios[i].getNome() == nomeFuncionario) {
 				
 				funcionarios[i] = null;
-				
-				return true;
+	
 			}
 			
 		}
 
-		return false;
 	}
 
 	@Override
-	public String procurar(String nomeFuncionario) {
+	public Funcionario procurar(String nomeFuncionario) {
 		
 		for(int i = 0; i < indice; i++) {
 			
 			if(funcionarios[i].getNome() == nomeFuncionario) {
 				
-				return funcionarios[i].toString();
+				return funcionarios[i];
 			}
 			
 		}
@@ -71,7 +58,7 @@ public class RepositorioFuncionariosArray implements RepositorioFuncionarios {
 	}
 
 	@Override
-	public boolean atualizar(Funcionario funcionario) {
+	public void atualizar(Funcionario funcionario) {
 		// TODO Auto-generated method stub
 		
 		for(int i = 0; i < indice; i++) {
@@ -79,12 +66,9 @@ public class RepositorioFuncionariosArray implements RepositorioFuncionarios {
 			if(funcionarios[i].getNome() == funcionario.getNome()) {
 				
 				funcionarios[i] = funcionario;
-				return true;
 			}
 			
 		}
-		
-		return false;
 		
 	}
 

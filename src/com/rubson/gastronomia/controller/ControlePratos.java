@@ -11,24 +11,16 @@ public class ControlePratos {
 		pratos.inserir(prato);
 	}
 	
-	public boolean remover(String nomePrato) {
-		if(pratos.remover(nomePrato)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void remover(String nomePrato) {
+		pratos.remover(nomePrato);
 	}
 	
 	public Prato procurar(String nomePrato) {
 		return pratos.procurar(nomePrato);
 	}
 	
-	public boolean atualizar(Prato prato) {
-		if(pratos.atualizar(prato)) {
-			return true;
-		} else {
-			return false;
-		}
+	public void atualizar(Prato prato) {
+		pratos.atualizar(prato);
 	}
 
 }

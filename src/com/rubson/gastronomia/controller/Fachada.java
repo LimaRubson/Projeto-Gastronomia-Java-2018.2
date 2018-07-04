@@ -28,76 +28,50 @@ public class Fachada {
 		clientes.cadastrar(cliente);
 	}
 	
-	public boolean removerCliente(String nomeCliente) {
-		if(clientes.remover(nomeCliente)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void removerCliente(String nomeCliente) {
+		clientes.remover(nomeCliente);
 	}
 	
-	public String procurarCliente(String nomeCliente) {
+	public Cliente procurarCliente(String nomeCliente) {
 		return clientes.procurar(nomeCliente);
 	}
 	
-	public boolean atualizar(Cliente cliente) {
-		if(clientes.atualizar(cliente)) {
-			return true;
-		} else {
-			return false;
-		}
+	public void atualizar(Cliente cliente) {
+		clientes.atualizar(cliente);
 	}
 	
 	public void cadastrar(Funcionario funcionario) {
 		funcionarios.inserir(funcionario);
 	}
 	
-	public boolean removerFuncionario(String nomeCliente) {
-		if(funcionarios.remover(nomeCliente)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void removerFuncionario(String nomeCliente) {
+		funcionarios.remover(nomeCliente);
 	}
 	
-	public String procurarFuncionario(String nomeFuncionario) {
-		//Incluir validacoes e regras de negocio
+	public Funcionario procurarFuncionario(String nomeFuncionario) {
 		return funcionarios.procurar(nomeFuncionario);
 	}
 	
-	public boolean atualizar(Funcionario funcionario) {
+	public void atualizar(Funcionario funcionario) {
 		
-		if(funcionarios.atualizar(funcionario)) {
-			return true;
-		} else {
-			return false;
-		}
-		
+		funcionarios.atualizar(funcionario);		
 	}
 	
 	public void cadastrar(Prato prato) {
 		pratos.cadastrar(prato);
 	}
 	
-	public boolean removerPrato(String nomePrato) {
-		if(pratos.remover(nomePrato)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void removerPrato(String nomePrato) {
+		pratos.remover(nomePrato);
 	}
 	
 	public Prato procurarPrato(String nomePrato) {
 		return pratos.procurar(nomePrato);
 	}
 	
-	public boolean atualizar(Prato prato) {
+	public void atualizar(Prato prato) {
 		
-		if(pratos.atualizar(prato)) {
-			return true;
-		} else {
-			return false;
-		}
+		pratos.atualizar(prato);
 		
 	}
 	
@@ -105,25 +79,17 @@ public class Fachada {
 		pedidos.inserir(pedido);
 	}
 	
-	public boolean removerPedido(String idPedido) {
-		if(pedidos.remover(idPedido)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void removerPedido(String idPedido) {
+		pedidos.remover(idPedido);
 	}
 	
-	public String procurarPedido(String idPedido) {
+	public Pedido procurarPedido(String idPedido) {
 		return pedidos.procurar(idPedido);
 	}
 	
-	public boolean atualizar(Pedido pedido) {
+	public void atualizar(Pedido pedido) {
 		
-		if(pedidos.atualizar(pedido)) {
-			return true;
-		} else {
-			return false;
-		}
+		pedidos.atualizar(pedido);
 		
 	}
 	
@@ -131,26 +97,16 @@ public class Fachada {
 		vendas.cadastrar(venda);
 	}
 	
-	public boolean removerVenda(String nomeCliente) {
-		if(vendas.remover(nomeCliente)) {
-			return true;
-		} else {
-			return false;
-		}
+	public void removerVenda(String nomeCliente) {
+		vendas.remover(nomeCliente);
 	}
 	
-	public String procurarVenda(String nomeCliente) {
+	public Venda procurarVenda(String nomeCliente) {
 		return vendas.procurar(nomeCliente);
 	}
 	
-	public boolean atualizar(Venda venda) {
-		
-		if(vendas.atualizar(venda)) {
-			return true;
-		} else {
-			return false;
-		}
-		
+	public void atualizar(Venda venda) {
+		vendas.atualizar(venda);
 	}
 
 }

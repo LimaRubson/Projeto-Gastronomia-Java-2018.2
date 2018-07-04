@@ -18,38 +18,25 @@ public class RepositorioPratosArray implements RepositorioPratos {
 	}
 
 	@Override
-	public boolean inserir(Prato prato) {
-		try {
+	public void inserir(Prato prato) {
 			
 			this.pratos[indice] = prato;
 			this.indice = this.indice + 1;
-	
-		} catch(Exception e) {
-			
-			return false;
-			
-		
-		}
-	
-		return true;
 	}
 
 	@Override
-	public boolean remover(String nomePrato) {
+	public void remover(String nomePrato) {
 		
 		for(int i = 0; i < indice; i++) {
 					
 					if(pratos[i].getNome() == nomePrato) {
 						
 						pratos[i] = null;
-						
-						return true;
 					
 					}
 					
 				}
-		
-		return false;
+
 	}
 
 	@Override
@@ -68,20 +55,16 @@ public class RepositorioPratosArray implements RepositorioPratos {
 	}
 
 	@Override
-	public boolean atualizar(Prato prato) {
-		// TODO Auto-generated method stub
-		
+	public void atualizar(Prato prato) {
 		for(int i = 0; i < indice; i++) {
 			
 			if(pratos[i].getNome() == prato.getNome()) {
 				
 				pratos[i] = prato;
-				return true;
+			
 			}
 			
 		}
-		
-		return false;
 		
 	}
 

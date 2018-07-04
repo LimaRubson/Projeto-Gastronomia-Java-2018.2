@@ -19,50 +19,38 @@ public class RepositorioPedidoArray implements RepositorioPedido {
 	
 
 	@Override
-	public boolean inserir(Pedido pedido) {
-		try {
+	public void inserir(Pedido pedido) {
 			
 			this.pedidos[indice] = pedido;
 			this.indice = this.indice + 1;
-	
-		} catch(Exception e) {
-			
-			return false;
-			
-		
-		}
-	
-		return true;
 		
 	}
 
 
 
 	@Override
-	public boolean remover(String idPedido) {
+	public void remover(String idPedido) {
 		for(int i = 0; i < indice; i++) {
 			
 			if(pedidos[i].getId() == idPedido) {
 				
 				pedidos[i] = null;
 				
-				return true;
 			}
 			
 		}
-
-		return false;
+		
 	}
 
 
 
 	@Override
-	public String procurar(String idPedido) {
+	public Pedido procurar(String idPedido) {
 	  for(int i = 0; i < indice; i++) {
 			
 			if(pedidos[i].getId() == idPedido) {
 				
-				return pedidos[i].toString();
+				return pedidos[i];
 			}
 			
 		}
@@ -72,7 +60,7 @@ public class RepositorioPedidoArray implements RepositorioPedido {
 
 
 	@Override
-	public boolean atualizar(Pedido pedido) {
+	public void atualizar(Pedido pedido) {
 		// TODO Auto-generated method stub
 		
 		 for(int i = 0; i < indice; i++) {
@@ -80,13 +68,10 @@ public class RepositorioPedidoArray implements RepositorioPedido {
 				if(pedidos[i].getId() == pedido.getId()) {
 					
 					pedidos[i] = pedido;
-					return true;
 					
 				}
 				
 			}
-		 
-		 return false;
 		
 	 }
 

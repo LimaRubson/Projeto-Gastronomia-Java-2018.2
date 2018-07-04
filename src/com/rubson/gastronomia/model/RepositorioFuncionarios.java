@@ -4,9 +4,9 @@ import com.rubson.gastronomia.controller.Funcionario;
 
 public interface RepositorioFuncionarios {
 	
-	public boolean inserir(Funcionario funcionario);
-	public boolean remover(String nomefuncionario);
-	public String procurar(String nomeFuncionario);
-	public boolean atualizar(Funcionario funcionario);
+	public void inserir(Funcionario funcionario);
+	public void remover(String nomefuncionario);
+	public Funcionario procurar(String nomeFuncionario);
+	public void atualizar(Funcionario funcionario);
 
 }

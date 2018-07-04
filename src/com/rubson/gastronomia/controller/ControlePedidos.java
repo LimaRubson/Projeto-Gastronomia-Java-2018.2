@@ -11,25 +11,17 @@ RepositorioPedido pedidos = new RepositorioPedidoArray();
 		pedidos.inserir(pedido);
 	}
 	
-	public boolean remover (String idPedido) {
-		if(pedidos.remover(idPedido)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void remover (String idPedido) {
+		pedidos.remover(idPedido);
 	}
 	
-	public String procurar(String idPedido) {
+	public Pedido procurar(String idPedido) {
 		return pedidos.procurar(idPedido);
 	}
 	
-	public boolean atualizar(Pedido pedido) {
+	public void atualizar(Pedido pedido) {
 		
-		if(pedidos.atualizar(pedido)) {
-			return true;
-		} else {
-			return false;
-		}
+		pedidos.atualizar(pedido);
 		
 	}
 

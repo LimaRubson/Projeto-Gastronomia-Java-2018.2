@@ -17,50 +17,36 @@ public class RepositorioClientesArray implements RepositorioClientes {
 	}
 	
 	@Override
-	public boolean inserir(Cliente cliente) {
+	public void inserir(Cliente cliente) {
 		
-		try {
-			
 			this.clientes[indice] = cliente;
 			this.indice = this.indice + 1;
-	
-		} catch(Exception e) {
-			
-			return false;
-			
-		
-		}
-	
-		return true;
 		
 	}
 
 	@Override
-	public boolean remover(String nomeCliente) {
+	public void remover(String nomeCliente) {
 		
 		for(int i = 0; i < indice; i++) {
 			
 			if(clientes[i].getNome() == nomeCliente) {
 				
 				clientes[i] = null;
-				
-				return true;
 			
 			}
 			
 		}
-		
-		return false;
+
 	}
 
 	@Override
-	public String procurar(String nomeCliente) {
+	public Cliente procurar(String nomeCliente) {
 		
 		for(int i = 0; i < indice; i++) {
 			
 			if(clientes[i].getNome() == nomeCliente) {
 				
-				return clientes[i].toString();
+				return clientes[i];
 				
 			}
 			
@@ -70,22 +56,18 @@ public class RepositorioClientesArray implements RepositorioClientes {
 	}
 
 	@Override
-	public boolean atualizar(Cliente cliente) {
-	  // TODO Auto-generated method stub
+	public void atualizar(Cliente cliente) {
 		
 		for(int i = 0; i < indice; i++) {
 			
 			if(clientes[i].getNome() == cliente.getNome()) {
 				
 				clientes[i] = cliente;
-				return true;
 				
 			}
 			
 		}
-		
-		return false;
-		
+
 	}
 
 }

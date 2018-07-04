@@ -11,26 +11,16 @@ public class ControleClientes {
 		clientes.inserir(cliente);
 	}
 	
-	public boolean remover (String numero) {
-		if(clientes.remover(numero)) {
-			return true;
-		}else {
-			return false;
-		}
+	public void remover (String numero) {
+		clientes.remover(numero);
 	}
 	
-	public String procurar(String nomeCliente) {
+	public Cliente procurar(String nomeCliente) {
 		return clientes.procurar(nomeCliente);
 	}
 	
-	public boolean atualizar(Cliente cliente) {
-		
-		if(clientes.atualizar(cliente)) {
-			return true;
-		} else {
-			return false;
-		}
-		
+	public void atualizar(Cliente cliente) {
+		clientes.atualizar(cliente);
 	}
 
 }
