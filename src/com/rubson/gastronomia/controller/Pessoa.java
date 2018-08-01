@@ -73,10 +73,4 @@ public abstract class Pessoa {
 		this.observacoes = observacoes;
 	}
 	
-	@Override
-	public String toString() {
-		return "Pessoa [nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", sexo=" + sexo + ", endereco=" + endereco
-				+ ", email=" + email + ", telefone=" + telefone +  ", observacoes="
-				+ observacoes + "]";
-	}
 }

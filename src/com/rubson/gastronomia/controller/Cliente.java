@@ -18,6 +18,10 @@ public class Cliente extends Pessoa {
 		
 	}
 	
+	public void Cliente() {
+		
+	}
+	
 	public Pedido getPedido() {
 		return pedido;
 	}

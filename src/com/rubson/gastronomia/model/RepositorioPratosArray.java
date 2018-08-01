@@ -44,7 +44,7 @@ public class RepositorioPratosArray implements RepositorioPratos {
 		
 		for(int i = 0; i < indice; i++) {
 			
-			if(pratos[i].getNome() == nomePrato) {
+			if(pratos[i].getNome() == nomePrato && pratos[i] != null) {
 				
 				return pratos[i];
 			}

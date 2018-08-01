@@ -54,25 +54,6 @@ public class ItensPedido {
 		this.quantidadeItensPedidos = quantidadeItensPedidos;
 	}
 	
-	public void inserirPedido() {
-		
-	}
-	
-	public Pedido atualizarPedido(Pedido pedido) {
-		
-		return pedido;
-		
-	}
-	
-	public Pedido procurarPedido(Pedido pedido) {
-		
-		return pedido;
-		
-	}
-	
-	public void removerPedido() {
-		
-	}
 
 	@Override
 	public String toString() {

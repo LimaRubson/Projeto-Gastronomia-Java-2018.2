@@ -47,9 +47,10 @@ public class RepositorioFuncionariosArray implements RepositorioFuncionarios {
 		
 		for(int i = 0; i < indice; i++) {
 			
-			if(funcionarios[i].getNome() == nomeFuncionario) {
+			if(funcionarios[i].getNome() == nomeFuncionario && funcionarios[i] != null) {
 				
 				return funcionarios[i];
+				
 			}
 			
 		}

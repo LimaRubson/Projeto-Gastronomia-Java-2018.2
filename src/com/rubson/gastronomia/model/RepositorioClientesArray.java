@@ -18,7 +18,7 @@ public class RepositorioClientesArray implements RepositorioClientes {
 	
 	@Override
 	public void inserir(Cliente cliente) {
-		
+			
 			this.clientes[indice] = cliente;
 			this.indice = this.indice + 1;
 		
@@ -44,7 +44,7 @@ public class RepositorioClientesArray implements RepositorioClientes {
 		
 		for(int i = 0; i < indice; i++) {
 			
-			if(clientes[i].getNome() == nomeCliente) {
+			if(clientes[i].getNome() == nomeCliente && clientes[i] != null) {
 				
 				return clientes[i];
 				

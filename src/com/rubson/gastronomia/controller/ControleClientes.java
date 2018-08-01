@@ -2,6 +2,7 @@ package com.rubson.gastronomia.controller;
 
 import com.rubson.gastronomia.model.RepositorioClientes;
 import com.rubson.gastronomia.model.RepositorioClientesArray;
+import com.rubson.gastronomia.util.ClienteInexistenteException;
 
 public class ControleClientes {
 	
@@ -15,12 +16,24 @@ public class ControleClientes {
 		clientes.remover(numero);
 	}
 	
-	public Cliente procurar(String nomeCliente) {
-		return clientes.procurar(nomeCliente);
+	public Cliente procurar(String nomeCliente) throws ClienteInexistenteException {
+		if(clientes.procurar(nomeCliente) != null) {
+			
+			return clientes.procurar(nomeCliente);
+			
+		}else {
+			
+			ClienteInexistenteException e;
+			e = new ClienteInexistenteException(nomeCliente);
+			
+			throw e;
+			
+		}
 	}
 	
 	public void atualizar(Cliente cliente) {
 		clientes.atualizar(cliente);
 	}
+	
 
 }

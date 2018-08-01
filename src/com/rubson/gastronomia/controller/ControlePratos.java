@@ -2,6 +2,7 @@ package com.rubson.gastronomia.controller;
 
 import com.rubson.gastronomia.model.RepositorioPratos;
 import com.rubson.gastronomia.model.RepositorioPratosArray;
+import com.rubson.gastronomia.util.PratoInexistenteException;
 
 public class ControlePratos {
 	
@@ -15,8 +16,17 @@ public class ControlePratos {
 		pratos.remover(nomePrato);
 	}
 	
-	public Prato procurar(String nomePrato) {
-		return pratos.procurar(nomePrato);
+	public Prato procurar(String nomePrato) throws PratoInexistenteException {
+		if(pratos.procurar(nomePrato) != null) {
+			return pratos.procurar(nomePrato);
+		} else {
+			
+			PratoInexistenteException e;
+			e = new PratoInexistenteException(nomePrato);
+			
+			throw e;
+			
+		}
 	}
 	
 	public void atualizar(Prato prato) {

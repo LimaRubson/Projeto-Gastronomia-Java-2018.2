@@ -48,7 +48,7 @@ public class RepositorioPedidoArray implements RepositorioPedido {
 	public Pedido procurar(String idPedido) {
 	  for(int i = 0; i < indice; i++) {
 			
-			if(pedidos[i].getId() == idPedido) {
+			if(pedidos[i].getId() == idPedido && pedidos[i] != null) {
 				
 				return pedidos[i];
 			}

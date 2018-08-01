@@ -1,5 +1,11 @@
 package com.rubson.gastronomia.controller;
 
+import com.rubson.gastronomia.util.ClienteInexistenteException;
+import com.rubson.gastronomia.util.FuncionarioInexistenteException;
+import com.rubson.gastronomia.util.PedidoInexistenteException;
+import com.rubson.gastronomia.util.PratoInexistenteException;
+import com.rubson.gastronomia.util.VendaInexistenteException;
+
 public class Fachada {
 	
 	private ControleClientes clientes;
@@ -32,7 +38,7 @@ public class Fachada {
 		clientes.remover(nomeCliente);
 	}
 	
-	public Cliente procurarCliente(String nomeCliente) {
+	public Cliente procurarCliente(String nomeCliente) throws ClienteInexistenteException {
 		return clientes.procurar(nomeCliente);
 	}
 	
@@ -48,7 +54,7 @@ public class Fachada {
 		funcionarios.remover(nomeCliente);
 	}
 	
-	public Funcionario procurarFuncionario(String nomeFuncionario) {
+	public Funcionario procurarFuncionario(String nomeFuncionario) throws FuncionarioInexistenteException {
 		return funcionarios.procurar(nomeFuncionario);
 	}
 	
@@ -65,7 +71,7 @@ public class Fachada {
 		pratos.remover(nomePrato);
 	}
 	
-	public Prato procurarPrato(String nomePrato) {
+	public Prato procurarPrato(String nomePrato) throws PratoInexistenteException {
 		return pratos.procurar(nomePrato);
 	}
 	
@@ -83,7 +89,7 @@ public class Fachada {
 		pedidos.remover(idPedido);
 	}
 	
-	public Pedido procurarPedido(String idPedido) {
+	public Pedido procurarPedido(String idPedido) throws PedidoInexistenteException {
 		return pedidos.procurar(idPedido);
 	}
 	
@@ -101,7 +107,7 @@ public class Fachada {
 		vendas.remover(nomeCliente);
 	}
 	
-	public Venda procurarVenda(String nomeCliente) {
+	public Venda procurarVenda(String nomeCliente) throws VendaInexistenteException {
 		return vendas.procurar(nomeCliente);
 	}
 	

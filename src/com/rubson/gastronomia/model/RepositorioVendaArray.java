@@ -40,7 +40,7 @@ public class RepositorioVendaArray implements RepositorioVenda {
 	public Venda procurar(String nomeCliente) {
 		for(int i = 0; i < indice; i++) {
 			
-			if(vendas[i].getCliente().getNome() == nomeCliente) {
+			if(vendas[i].getCliente().getNome() == nomeCliente && vendas[i] != null) {
 				
 				return vendas[i];
 			}

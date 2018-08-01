@@ -7,6 +7,7 @@ public class Funcionario extends Pessoa {
 	private Pedido pedido;
 	private String tipoFuncionario;
 	
+	
 	public Funcionario(String nome, String cpf, String rg, String sexo, String endereco, String email, String telefone,
 		     String observacoes, int cargaHoraria, double salario, Pedido pedido,
 			String tipoFuncionario) {
@@ -19,6 +20,8 @@ public class Funcionario extends Pessoa {
 		
 	}
 	
+
+
 	public int getCargaHoraria() {
 		return cargaHoraria;
 	}
